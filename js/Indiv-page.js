@@ -67,9 +67,22 @@ function getProductApi(){
                     </div>
             
             `
+            // let newproDuctDiv=document.createElement('div')
+            // newproDuctDiv.classList.add('product_details')
+            // let product_description=`
+              
+            //     <p>${products.description}</p>
+
+           
+            
+            // `
+            // newproDuctDiv.innerHTML=product_description
+
+            
             let button=productDetails.querySelector('.button_now')
             button.addEventListener('click', ()=> addProductToCart(products) )
             individual_container.appendChild(productDetails)
+            // individual_container.appendChild(newproDuctDiv)
 })
 
 }

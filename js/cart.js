@@ -37,14 +37,19 @@ function removeProduct(productId){
 function incrementProductCount(productId){
      let products= getCart()
     products=products.map(cart=>{
-        
+        let updatedCart
         if(cart.product.id == productId){
-            return {...cart, count:cart.count *1 +1 }
+             updatedCart= {...cart, count:cart.count *1 +1 }
+            getCart()
+            window.location.reload();
+            return updatedCart
 
         }
         else{
             return cart
         }
+
+       
     })
     localStorage.setItem('cartInfo', JSON.stringify(products))
     
@@ -72,10 +77,15 @@ function decrementProductCount(productId){
  
 function upDateCartUI(){
     let productCount= getCart().length
-    let cartInfo =document.querySelector('.cart-info')
-    cartInfo.value=productCount
+    let cartInfo =document.querySelectorAll('.cart-info')
+    console.log(cartInfo)
+    cartInfo.forEach(e=>{
+      e.value=productCount
+
+    })
+    
     if(productCount > 0){
-        cartInfo.style.backgroundColor='rgb(43, 42, 42)'
+        // cartInfo.style.backgroundColor='rgb(43, 42, 42)'
     
     }
     

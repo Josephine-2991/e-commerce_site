@@ -1,9 +1,11 @@
 
 let individual_container= document.querySelector('.individual_container')
 let cartInfo=document.querySelector('.cart-parent')
+let indiv_heading=document.querySelector('.indiv-heading')
+
 upDateCartUI()
-let cart1= getCart()
-let cart = new set([])
+let cart= getCart()
+
 
 console.log(cart)
 
@@ -11,7 +13,10 @@ console.log(cart)
 //Displaying product on the cart page
 function displayProduct(arr){
     let displayCart
+    // let heading=document.createElement('div')
+    // heading.appendChild(indiv_heading)
     
+
       
     arr?.forEach(eachProduct =>{
       displayCart=`
@@ -46,6 +51,8 @@ function displayProduct(arr){
                 </div>
 
 `
+
+     
     let newDiv= document.createElement('div')
     newDiv.innerHTML=displayCart
     individual_container.appendChild(newDiv)
