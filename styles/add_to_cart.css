@@ -76,7 +76,7 @@ header {
     height: 40px;
 }
 
-.input {
+.cart-info{
     background-color: rgb(231, 236, 230);
     color: white;
     border-radius: 50%;
@@ -95,7 +95,9 @@ header {
 /* NEEDED NOW */
 
 .product-image{
-    border-radius:10px; 
+    border-radius:10px;
+    width: 200px;
+    height:200px;
 
 }
 .con1{
@@ -114,6 +116,10 @@ header {
     border-radius:5px;
 }
 
+.remove1{
+    width:100px;
+}
+
 .summary{
     font-size: 14px;
 }
@@ -128,19 +134,16 @@ font-size: 13px;
     gap: 100px;
     padding-right: 20px;
 }
-.total{
-    /* border: 2px solid black; */
-    box-shadow: 0px 0px 2px 1px rgb(252, 252, 213);
-    border: none;
-    outline: none;
-    
-}
 
 .total-child{
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 10px;
+    border: 6px solid black;
+    box-shadow: 0px 0px 2px 1px rgb(252, 252, 213);
+    border: none;
+    outline: none;
 }
 
 .two{
@@ -158,6 +161,7 @@ font-size: 13px;
 }
 .individual_container {
     background-color: #b7b6b6;
+    width: 70%
 
 
 
@@ -173,18 +177,8 @@ font-size: 13px;
     border-radius: 0px 10px 10px 10px;
 }
 
-.rating {
-    width: 20px;
-    height: 20px;
-    color: rgb(160, 160, 3);
-}
-
-.main_delivery {
-    display: flex;
-    flex-direction: column;
 
 
-}
 
 
 .button_now:hover {
@@ -199,13 +193,16 @@ font-size: 13px;
     color: white;
     padding: 9px 15px;
     font-size: 14px;
-    width: 50px;
     border-radius: 10px;
     border: none;
     outline: none;
     box-shadow: inset 0px 0px 0px 2px rgb(240, 243, 241);
     justify-self: flex-start;
     align-self: flex-start;
+}
+
+.add, .remove{
+    width: 50px;
 }
 .take{
   width: 200px;

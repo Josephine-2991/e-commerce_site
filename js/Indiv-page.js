@@ -1,6 +1,9 @@
+upDateCartUI()
+
+
 function getProductApi(){
     let productId=localStorage.getItem('productId')
-        fetch("https://fakestoreapi.com/products/${productId}").then(function (response) {
+        fetch(`https://fakestoreapi.com/products/${productId}`).then(function (response) {
         return response.json()
     }).then(function (products) {
 
@@ -8,12 +11,10 @@ function getProductApi(){
          
         let individual_container=document.querySelector('.individual_container')
 
-        let productDetails=''
-
-              productDetails+=`
-
-                    <div class="row">
-                 <div class=" col con">
+        let productDetails=document.createElement('div')
+            productDetails.classList.add('row')
+            productDetails.innerHTML=`
+                     <div class=" col con">
                     <img src=${products.image} alt="" class="product-image">
 
                  </div>
@@ -64,22 +65,12 @@ function getProductApi(){
                         </select>
                         
                     </div>
-                    
-                    
-                 </div>
-        
-        
-        
-        
-        
-        `
-        individual_container.innerHTML=productDetails
-    })
-
-    
-
-
-
+            
+            `
+            let button=productDetails.querySelector('.button_now')
+            button.addEventListener('click', ()=> addProductToCart(products) )
+            individual_container.appendChild(productDetails)
+})
 
 }
 getProductApi()

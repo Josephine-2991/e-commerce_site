@@ -64,11 +64,11 @@ header{
     height: 40px;
 }
 
-.input{
+.cart-info{
     background-color: rgb(231, 236, 230);
     color: white;
     border-radius: 50%;
-    width: 18px;
+    width: 20px;
     height: 18px;
     position: absolute;
     top:0px;

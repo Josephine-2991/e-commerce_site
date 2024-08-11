@@ -1,7 +1,7 @@
 
 const productsth = document.querySelector('.product_container')
 
-
+upDateCartUI()
 
 let newArr = []
 function getIndividualProductApi() {

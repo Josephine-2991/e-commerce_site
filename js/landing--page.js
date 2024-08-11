@@ -57,8 +57,7 @@ function getCategoryProductApi(){
         newArr1 = categoryProducts.slice(0,6)
         console.log(categoryProducts.slice(0,4))
          addCategoryProduct() 
-        //  console.log(categoryProducts[0].images[0])
-
+       
     })
 
 }
@@ -86,17 +85,10 @@ function addCategoryProduct() {
 
 }
 const button_now=document.querySelector('.button_now')
-const input=document.querySelector('.input')
-let quantity=0
-
-// Add to cart Function
-function addToCart(){
-    quantity+=1
-    input.value=quantity
-    input.style.backgroundColor='rgb(43, 42, 42)'
 
 
-}
+
+
 
 
 
