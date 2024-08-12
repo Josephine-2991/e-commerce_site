@@ -90,5 +90,34 @@ getProductApi()
 
 
 
+function getProductDescriptionApi(){
+    let productId=localStorage.getItem('productId')
+        fetch(`https://fakestoreapi.com/products/${productId}`).then(function (response) {
+        return response.json()
+    }).then(function (products) {
+
+        console.log(products)
+         
+        let Description_container=document.querySelector('.details')
+
+        let productDescription=document.createElement('div')
+            productDescription.classList.add('product_details')
+            productDescription.innerHTML=`
+                     <p>${products.description}</p>
+            `
+        
+            
+
+             Description_container.appendChild(productDescription)
+            // individual_container.appendChild(newproDuctDiv)
+})
+
+}
+getProductDescriptionApi()
+
+
+
+
+
 
 
